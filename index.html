@@ -16,7 +16,7 @@
 
     <!-- Mobile Nav -->
 
-    <nav class="mobile-nav flex items-center justify-between mx-4 mt-4 md:hidden">
+    <nav class="mobile-nav flex items-center justify-between mx-4 mt-4 lg:hidden">
         <div class="left-nav">
             <a href="/">
                 <img class="h-20" src="assets/logo-solo.png" alt="">
@@ -32,8 +32,8 @@
 
     <!-- Mobile Sidebar -->
 
-    <nav class="mobile-sidebar md:hidden">
-        <aside class="w-44 fixed font-bold right-0 top-3/4 h-screen bg-transparent text-almostyellow pr-4">
+    <nav class="mobile-sidebar lg:hidden">
+        <aside class="w-44 fixed z-10 font-bold right-0 top-3/4 h-screen bg-transparent text-almostyellow pr-4">
 
             <ul class="flex flex-col text-right font-open space-y-2">
                 <li>
@@ -55,7 +55,7 @@
 
     <!-- Desktop Nav -->
 
-    <nav class="desktop-nav mx-16 my-10 hidden md:block">
+    <nav class="desktop-nav mx-16 my-10 hidden lg:block">
         <div class="flex justify-between items-center">
             <div class="left-nav flex items-center space-x-8">
                 <div>
@@ -78,7 +78,7 @@
                             <a href="/" data-nav-link="home">/home</a>
                         </li>
                         <li>
-                            <a href="services.html" data-nav-link="services">/services</a>
+                            <a href="pages/services.html" data-nav-link="services">/services</a>
                         </li>
                         <li>
                             <a href="/pricing" data-nav-link="pricing">/pricing</a>
@@ -125,7 +125,8 @@
 
         <!-- Desktop Scene -->
 
-        <div class="hidden md:block mx-6 my-32 space-y-5 pb-5">
+        <!-- Hero section -->
+        <div class="hidden md:block mx-6 my-32 space-y-5 pb-5 2xl:h-96">
 
             <div
                 class="flex md:flex-col md:space-y-10 lg:flex-row justify-between lg:justify-evenly lg:space-x-48 xl:space-x-32">
@@ -176,11 +177,11 @@
 
                 <div class="hero-right flex flex-col md:space-y-8">
                     <div>
-                        <h1 class="text-white md:text-2xl lg:text-2xl font-open font-bold leading-loose">
+                        <h1 class="text-white md:text-2xl xl:text-3xl font-open font-bold leading-loose">
                             Offering the ultimate trifecta of <br> digital prowess:
                         </h1>
                         <p class="flex justify-end z-10">
-                            <img class="flex md:h-28 md:-my-20 md:mx-44 lg:h-32 lg:-mx-6 xl:-mx-6 2xl:mx-8 xl:-my-18 2xl:-my-20 2xl:h-40"
+                            <img class="flex md:h-28 md:-my-20 md:mx-44 lg:h-32 lg:-mx-6 xl:-mx-6 xl:-my-28 2xl:-my-28 2xl:h-40"
                                 src="assets/triiii.gif" alt="GIF">
                         </p>
                     </div>
@@ -207,10 +208,115 @@
 
         </div>
 
+        <!-- Service Section -->
+        <div class="">
+
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+
+                <h1 class="text-mypink font-open font-bold text-4xl">Our Digital Marketing Services</h1>
+
+                <p class="text-white text-justify">At Finesse, we provide a comprehensive suite of digital services to
+                    help businesses like yours succeed online. Let us help you
+                    elevate your online presence and achieve your business goals. Our services include:</p>
+            </div>
+
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+
+                <!--Card 1-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/smm.png" alt="Social Media Marketing">
+                            SOCIAL MEDIA
+                            MARKETING</div>
+                        <p class="text-gray-700 text-base">
+                            Our team of social media experts will help you reach your target audience and drive
+                            engagement, with strategies tailored to your unique brand and objectives.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card 2-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <!-- <img class="w-full" src="/river.jpg" alt="River"> -->
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/web dev.png" alt="Social Media Marketing">
+                            WEB DEVLOPMENT</div>
+                        We specialize in designing and developing custom websites that showcase your brand and
+                        provide a seamless user experience, optimized for performance and results.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card 3-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/app dev.png" alt="Social Media Marketing">
+                            APP DEVELOPMENT</div>
+                        From concept to launch, we'll help you bring your app idea to life, with innovative and
+                        engaging solutions that keep your users coming back for more.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card 4-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/digital strategy.png" alt="Social Media Marketing">
+                            DIGITAL STRATEGY</div>
+                        We take a data-driven approach to digital strategy, helping you optimize your online
+                        presence and drive measurable results across all channels.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card 5-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/seo.png" alt="Social Media Marketing">
+                            SEO</div>
+                        Improve your online visibility and attract more traffic to your website with our SEO services.
+                        Our team of experts will work with you to develop a customized strategy that drives results,
+                        with a focus on keyword research, content optimization, and technical SEO.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Card 6-->
+                <div
+                    class="rounded overflow-hidden shadow-lg bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg transition duration-300 ease-in-out hover:scale-105">
+                    <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+                    <div class="px-6 py-4">
+                        <div class="flex font-bold text-xl mb-2 font-open"> <img class="h-8 pr-3"
+                                src="/assets/Socials/graphic design.png" alt="Social Media Marketing">
+                            GRAPHIC DESIGN</div>
+                        Stand out from the crowd with stunning and memorable visuals that showcase your brand. Our
+                        graphic design services include logo design, marketing collateral, social media graphics, and
+                        more, all tailored to your unique brand and audience. Let us help you create a visual identity
+                        that leaves a lasting impression.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
     </main>
 
-    <footer
-        class="text-white p-4 flex flex-col justify-between items-center w-full text-xs font-open absolute bottom-0">
+    <footer class="text-white p-4 flex flex-col justify-between items-center w-full text-xs font-open absolute">
         <!-- <p>Designed and developed by <a href="#" class="underline">Stewart Michaels</a></p> -->
         <p>&copy; 2023 Finesse. All rights reserved.</p>
     </footer>
@@ -236,7 +342,7 @@
 
                 // If the link corresponds to the current page, add the active class
                 if (path === linkPath) {
-                    link.classList.add("text-white");
+                    link.classList.add("text-mypink");
                 }
             }
         });

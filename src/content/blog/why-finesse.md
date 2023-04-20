@@ -7,8 +7,8 @@ image: {
     alt: "Marketing Agency"
 }
 publishDate: "2022-04-20 14:44"
-category: "Finesse"
-author: "Stewart Michaels"
+category: "Marketing"
+author: "Team Finesse"
 tags: [marketing agency, social media marketing, finesse]
 ---
 ## Unlock Your Business's Potential with Finesse : The Digital Marketing Experts

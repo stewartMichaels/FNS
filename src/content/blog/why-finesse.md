@@ -6,7 +6,7 @@ image: {
     src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     alt: "Marketing Agency"
 }
-publishDate: "2022-04-20 14:44"
+publishDate: "2023-04-20 14:44"
 category: "Marketing"
 author: "Team Finesse"
 tags: [marketing agency, social media marketing, finesse]

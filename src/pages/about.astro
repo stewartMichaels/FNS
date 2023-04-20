@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About</Fragment>
+      <Fragment slot="desc">
+        We are a small team that believes in empowering your digital dreams, one
+        pixel at a time.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Innovative Digital Solutions for Your Business.
+      </h2>
+      <div class="text-lg leading-relaxed text-slate-500">
+        <p class="pb-2">
+          Welcome to Finesse, your one-stop-shop for innovative digital
+          solutions. Our team of experts specializes in Web Development, App
+          Development, SEO, Graphic Design, Digital Strategy, and Social Media
+          Marketing. We take pride in our ability to stay ahead of the curve,
+          implementing the latest technologies and trends to ensure your
+          business is always at the forefront of the digital landscape.
+        </p>
+
+        <p class="pb-2">
+          Our goal is to provide you with the tools and strategies you need to
+          succeed in today's competitive online environment. Whether you're
+          looking to boost your website's ranking in search engines, create a
+          stunning brand identity, or engage with your audience on social media,
+          we have the expertise and experience to deliver results.
+        </p>
+        <p>
+          At Finesse, we believe in the power of collaboration. We work closely
+          with each of our clients to understand their unique needs and goals,
+          and then develop tailored solutions that help them achieve success. So
+          why wait? Contact us today and let's take your business to the next
+          level.
+        </p>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        publishedTeamMembers.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src={teamMemberEntry.data.avatar.src}
+                alt={teamMemberEntry.data.avatar.alt}
+                sizes="(max-width: 800px) 100vw, 400px"
+                widths={[200, 400]}
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.title}
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">
+        Let's Connect and Grow Together: Contact Us Today
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Contact Team Finesse</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Partner with Finesse for all your digital needs! We're here to listen,
+          provide solutions, and help your business succeed. Request a free
+          proposal or quote tailored to your specific needs and take the next
+          step with us today!
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Guwahati, Assam, India 781006</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:hello@astroshipstarter.com">contact@teamfinesse.in</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+91 70020 72290">+91 70020 72290</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

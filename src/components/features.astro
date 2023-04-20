@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "SOCIAL MEDIA MARKETING",
+    description:
+      "Our team of social media experts will help you reach your target audience and drive engagement, with strategies tailored to your unique brand and objectives.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "WEB DEVLOPMENT",
+    description:
+      "We specialize in designing and developing custom websites that showcase your brand and provide a seamless user experience, optimized for performance and results.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "APP DEVELOPMENT",
+    description:
+      "From concept to launch, we'll help you bring your app idea to life, with innovative and engaging solutions that keep your users coming back for more.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "DIGITAL STRATEGY",
+    description:
+      "We take a data-driven approach to digital strategy, helping you optimize your online presence and drive measurable results across all channels.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "SEARCH ENGINE OPTIMIZATION",
+    description:
+      "Boost your online presence with our SEO services. Our experts will create a custom strategy to improve your visibility, focusing on keywords, content, and technical optimization.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "GRAPHIC DESIGN",
+    description:
+      "Create a unique and memorable brand identity with our tailored graphic design services, including logos, marketing collateral, and social media graphics that stand out and leave a lasting impression.",
+    icon: "bx:bxs-image",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to start a website
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Astro comes batteries included. It takes the best parts of state-of-the-art
+    tools and adds its own innovations.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
